@@ -1,0 +1,57 @@
+body {
+    background-color: #FF7F00;
+}
+
+#burgerpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Lacquer';
+}
+.row {
+    text-align: center;
+    font-family: 'Lacquer';
+}
+#newBurger {
+    height: 75px;
+    width: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#submitBtn {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: orangered;
+    border-color: orangered;
+    border-radius: 5px;
+}
+
+.burgerList {
+    border-radius: 5px;
+    background-color: rgb(255, 216, 158);
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.column {
+    display: inline-block;
+    margin: 10px;
+}

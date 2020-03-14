@@ -1,0 +1,52 @@
+<img id="burgerpic" src="https://media2.giphy.com/media/ToMjGplHPoYqSg7oACc/giphy.gif?cid=790b76118ea6e75f229692c2db0144b9322b779e433d30ff&rid=giphy.gif">
+<h1>Eat-Da-Burger</h1>
+
+<div class="row">
+
+  <div class="column toBeEaten">
+
+    <h2>To Be Eaten</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless eaten}}
+        <div class="input-group">
+          <form action="burger/eat/{{id}}" method="POST">
+              <li class="form-control burgerList">{{id}}. {{name}} 
+                <button class="btn btn-success change-eaten" type="button" data-id="{{id}}" data-eaten="{{eaten}}">Devour It!</button></li>
+
+          </div>
+          </form>
+        {{/unless}}
+      {{/each}}
+    </ul> 
+  </div>
+
+  <div class="column eaten">
+    <h2>Eaten</h2>
+    <ul>
+      {{#each burgers}}
+        {{#if this.eaten}}
+            <div class="input-group">
+              <li class="form-control burgerList">{{this.id}}. {{this.name}} 
+            </div>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+
+  </div>
+
+
+
+
+<form class="create-form">
+
+  <div class="form-group">
+    <input placeholder="What burger do you want to eat?" type="text" id="newBurger" name="name">
+    <br>
+    <button id="submitBtn">Submit</button>
+
+  </div>
+
+
+</form>
